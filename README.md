@@ -1,24 +1,5 @@
-# README
+# Project Design Initial
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this project, built in ruby on rails, there will be all public projects, means of contact and articles with thoughts, studies and research carried out.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![tela media fidelidade](https://github.com/YuriiSouza/Repositorio/assets/86446634/4b23c7d0-1baa-4b8e-acaa-7ccd7fb0e6bd)
