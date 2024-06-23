@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=M+PLUS+Code+Latin:wght@100..700&display=swap');
+
+:root {
+	/* COLORS */
+	--bg-color: #1E1E1E;
+	--font-color: #BFC8C7;
+
+	/* FONTS */
+	--font-name: "M PLUS Code Latin";
+	--font-code: "Libre Barcode 39 Text";
+}
+
+
+* {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#body {
+	background-color: var(--bg-color);
+	width: 100vw;
+	height: 100vh;
+}
+
+#contact{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 3rem;
+}
+
+svg {
+	padding: 0.2rem;
+	width: 1rem;
+	height: 1rem;
+}
+
+#coded {
+	font-family: var(--font-code);
+	color: var(--font-color);
+	font-size: 70px;
+}
+
+.normalText {
+	font-family: var(--font-name); 
+	color: var(--font-color);
+	font-weight: 200;
+	font-size: 70px;
+}
+
+#apresentation {
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20rem;
+}
+
+svg {
+	padding: 0.2rem;
+	width: 1rem;
+}
+
+#coded {
+	font-family: var(--font-code);
+	color: var(--font-color)
+}
+
+svg {
+	padding: 0.2rem;
+	width: 1rem;
+}
+
+#coded {
+	font-family: var(--font-code);
+	color: var(--font-color)
+}
+
+/* ---- reset ---- */ body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #b61924; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
