@@ -1,0 +1,62 @@
+<%= stylesheet_link_tag "landingPage" %>
+
+<div id="body">
+  <div id="contact">
+    <%= link_to 'mailto:yuripeixoto1112@gmail.com?subject=YuriSouza.com Contact Form' do %>
+      <%= render inline: Rails.root.join('public/mail.svg').read %>
+    <% end %>
+
+    <%= link_to 'https://github.com/YuriiSouza' do %>
+      <%= render inline: Rails.root.join('public/github.svg').read %>
+    <% end %>
+  </div>
+
+  <div id="apresentation" data-aos="flip-left">
+    <p id="coded">FULL STACK DEVELOPER</p>
+    <p class="normalText">YURI</p>    
+  </div>
+
+  <div id="bg_skills">
+    <div data-aos="fade-rigth" id="box_text_skills"> 
+      <div class="tittle_skill">
+        <h2>&#60;h1&#62;</h2> <h1> Angular </h1> <h2>&#60;/h1&#62;</h2>
+      </div>
+      <div class="body_skill">
+        <p>&#60;p&#62;</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet arcu quis lorem condimentum, nec fringilla purus vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin euismod dolor eget leo vehicula, vel tincidunt ligula convallis. Integer a libero id lorem rutrum scelerisque nec ac libero. </p>
+        <p>&#60;/p&#62;</p>
+      </div>
+    </div>
+    <div id="button_code_zone">
+      <div id="buttons_skills">
+        <%= render inline: Rails.root.join('public/python1.svg').read %>
+        <%= render inline: Rails.root.join('public/docker.svg').read %>
+        <%= render inline: Rails.root.join('public/typescript.svg').read %>
+        <%= render inline: Rails.root.join('public/angular.svg').read %>
+      </div> 
+
+      <div id="code_skills">
+        <p>def showThis():<br>
+        message = ”Hello World”<br>
+        return message<br>
+showThis()<br>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="projects">
+    <div id="list_projects">
+      <h2>&#60;h1&#62;</h2> <h1> PROJETOS </h1> <h2>&#60;/h1&#62;</h2>
+      
+    </div>
+
+    <div id="description">
+      
+    </div>
+  </div>
+
+  <div id="blog">
+
+  </div>
+</div>

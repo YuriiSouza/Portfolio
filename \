@@ -1,0 +1,46 @@
+<%= stylesheet_link_tag "landingPage" %>
+
+<div id="body">
+  <div id="contact">
+    <%= link_to 'mailto:yuripeixoto1112@gmail.com?subject=YuriSouza.com Contact Form' do %>
+      <%= render inline: Rails.root.join('public/mail.svg').read %>
+    <% end %>
+
+    <%= link_to 'https://github.com/YuriiSouza' do %>
+      <%= render inline: Rails.root.join('public/github.svg').read %>
+    <% end %>
+  </div>
+
+  <div id="apresentation" data-aos="flip-left">
+    <p id="coded">FULL STACK DEVELOPER</p>
+    <p class="normalText">YURI</p>    
+  </div>
+
+  <div id="bg_skills">
+    <div data-aos="fade-rigth" id="box_text_skills"> 
+      <div id="tittle_skill">
+        <h2>&#60;h1&#62;</h2><h1> Angular </h1><h2>&#60;h1&#62;</h2>
+      </div>
+      <div id="body_skill">
+        <p>&#60;p&#62;</p><p> trabalho com angular desde o começo da criação dele </p><p>&#60;p&#62;</p>
+      </div>
+    </div>
+    <div id="button_code_zone">
+      <div id="buttons_skills">
+        <button> <svg> </button>
+      </div> 
+
+      <div id="code_skills">
+        <p>def code time ouei <br> tentei ser <br> esse é a play <br> fim</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="projects">
+
+  </div>
+
+  <div id="blog">
+
+  </div>
+</div>
