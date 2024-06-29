@@ -1,17 +1,17 @@
 <%= stylesheet_link_tag "landingPage" %>
 
-<div id="body">
+<div id="body" data-controller='landing-page'>
   <div id="contact">
     <%= link_to 'mailto:yuripeixoto1112@gmail.com?subject=YuriSouza.com Contact Form' do %>
-      <%= render inline: Rails.root.join('public/mail.svg').read %>
+        <%= image_tag 'mail.svg', alt: 'email icone'%>
     <% end %>
 
     <%= link_to 'https://github.com/YuriiSouza' do %>
-      <%= render inline: Rails.root.join('public/github.svg').read %>
+      <%= image_tag 'github.svg', alt: 'github icone' %>
     <% end %>
   </div>
 
-  <div id="apresentation" data-aos="flip-left">
+  <div id="apresentation">
     <p id="coded">FULL STACK DEVELOPER</p>
     <p class="normalText">YURI</p>    
   </div>
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div id="button_code_zone">
-      <div id="buttons_skills">
+      <div id="buttons_skills" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <%= render inline: Rails.root.join('public/python1.svg').read %>
         <%= render inline: Rails.root.join('public/docker.svg').read %>
         <%= render inline: Rails.root.join('public/typescript.svg').read %>
@@ -76,7 +76,8 @@ showThis()<br>
     </div>
   </div>
 
-  <div class="blog">
+  <div class="blog" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
     <div class="tittle_skill">
       <h1>&#60;h1&#62;</h1><h1>BLOG</h1><h1>&#60;/h1&#62;</h1>
     </div>
@@ -136,6 +137,5 @@ showThis()<br>
    </div>
   </div>
 </div>
-<%= javascript_include_tag "landingPage.js" %>
 </div>
 

@@ -15,7 +15,6 @@
 	--font-write: "B612 Mono";
 }
 
-
 * {
 	border: 0px;
 	margin: 0px;
@@ -41,10 +40,9 @@
 	height: 3rem;
 }
 
-svg {
-	padding: 0.4rem;
-	width: 1rem;
-	height: 1rem;
+#contact * {
+	width: 20px;
+	padding: 10px;
 }
 
 @media (min-width: 721px) {
@@ -493,7 +491,7 @@ svg {
 		justify-content: center;
 		padding-top: 2rem;
 		padding-bottom: 2rem;
-		height: 15rem;
+		height: 20rem;
 	}
 
 	#bg_skills {
@@ -590,6 +588,7 @@ svg {
 		height: auto;
 		color: var(--font-color);
 		padding-top: 2rem;	
+		padding-bottom: 2rem;
 	}
 
 	#img_project > img{
