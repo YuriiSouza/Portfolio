@@ -32,6 +32,7 @@
 }
 
 #contact{
+	position: absolute;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -257,10 +258,22 @@
 }
 
 @media (min-width: 1200px) {
+
 	#coded {
 		font-family: var(--font-code);
 		color: var(--font-color);
 		font-size: 70px;
+		overflow: hidden;
+		white-space: nowrap;
+		animation: 
+		typing 2s steps(30, end),
+		blink-caret .1s step-end;
+	}
+
+	/* The typing effect */
+	@keyframes typing {
+		from { width: 0 }
+		to { width: 35% }
 	}
 
 	.normalText {
@@ -268,6 +281,16 @@
 		color: var(--font-color);
 		font-weight: 200;
 		font-size: 70px;
+		overflow: hidden;
+		white-space: nowrap;
+		animation: 
+		typewriter 2s steps(4, end),
+		blink-caret .2s step-end;
+	}
+
+	@keyframes typewriter {
+		from { width: 0 }
+		to { width: 10% }
 	}
 
 	#apresentation {
@@ -275,9 +298,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding-top: 20rem;
-		padding-bottom: 20rem;
-		height: 20rem;
+		height: 70vh;
 	}
 
 	#bg_skills {
@@ -341,6 +362,7 @@
 		flex-direction: column;
 		height: 15rem;
 		width: 30%;
+		align-items: start;
 	}
 
 	#buttons_skills {
@@ -357,11 +379,36 @@
 		align-items: center;
 	}
 
-	#code_skills {
+	.var-highlight {
+		color: #9791FF;
+	}
+
+	.string-highlight {
+		color: #EC5694;
+	}
+
+	#typewriter {
 		white-space: pre-wrap;
 		color: var(--font-color);
-		font-size: 20px;
+		font-size: 1em;
+		margin: 0;
+		font-family: 'B612 Mono';
+		position: relative;
+		padding-top: 3rem;
 	}
+
+	#typewriter::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		animation: blink 500ms linear infinite alternate;
+	}
+
+	@keyframes blink {
+		from { width: 0 }
+		to { width: 100% }
+	}
+
 
 	#projects{
 		width: 100%;
@@ -371,7 +418,7 @@
 		justify-content: space-around;
 		height: 40rem;
 		color: var(--font-color);
-		padding-top: 20rem;	
+		padding-top: 15rem;	
 	}
 
 	#list_projects {
@@ -421,7 +468,7 @@
 	.blog {
 		height: 20rem;
 		position: relative;
-		margin: auto;
+		margin: 10rem;
 		width: 80%;
 		overflow: hidden;
 		background-color: var(--bg-con-color); 

@@ -6,18 +6,18 @@
         <%= image_tag 'mail.svg', alt: 'email icone'%>
     <% end %>
 
-    <%= link_to 'https://github.com/YuriiSouza' do %>
+    <%= link_to 'https://github.com/YuriiSouza', target: '_blank' do %>
       <%= image_tag 'github.svg', alt: 'github icone' %>
     <% end %>
   </div>
 
   <div id="apresentation">
-    <p id="coded">FULL STACK DEVELOPER</p>
-    <p class="normalText">YURI</p>    
+    <p id="coded" class="animatedType">FULL STACK DEVELOPER</p>
+    <p class="normalText animatedType">YURI</p>    
   </div>
 
   <div id="bg_skills">
-    <div data-aos="fade-rigth" id="box_text_skills"> 
+    <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" id="box_text_skills"> 
       <div class="tittle_skill">
         <h1>&#60;h1&#62;</h1><h1>Angular</h1><h1>&#60;/h1&#62;</h1>
       </div>
@@ -33,18 +33,24 @@
         <%= render inline: Rails.root.join('public/angular.svg').read %>
       </div> 
 
-      <div id="code_skills">
-        <p>def showThis():<br>
-        message = ”Hello World”<br>
-        return message<br>
-showThis()<br>
-        </p>
-      </div>
+
+      <pre id="typewriter" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+<span class="var-highlight">var</span> object = {
+      name: <span class="string-highlight">'Foo'</span>,
+      type: <span class="string-highlight">'Bar'</span>,
+      location: <span class="string-highlight">'Earth'</span>,
+      properties:[<span class="string-highlight">'Javascript'</span>,
+                <span class="string-highlight">'HTML'</span>,
+                <span class="string-highlight">'CSS'</span>
+                 ];
+      }; </pre>
+
+
     </div>
   </div>
 
   <div id="projects">
-    <div id="list_projects">
+    <div id="list_projects" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div class="tittle_skill">
         <h1>&#60;h1&#62;</h1><h1 id="tittle_mod">PROJETOS</h1><h1>&#60;/h1&#62;</h1>
       </div>
@@ -55,7 +61,7 @@ showThis()<br>
       </ul>
     </div>
 
-    <div id="description">
+    <div id="description" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
       <div id="img_project">
         <%= image_tag 'logo_seuinvestimento.png', alt: 'logo do projeto seu investimento' %>
       </div>
@@ -67,7 +73,7 @@ showThis()<br>
           <p>&#60;p&#62;</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet arcu quis lorem condimentum, nec fringilla purus vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin euismod dolor eget leo vehicula, vel tincidunt ligula convallis. Integer a libero id lorem rutrum scelerisque nec ac libero.</p><p>&#60;/p&#62;</p>
         </div>
       </div>
-      <div id="tecnology">
+      <div id="tecnology" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <%= render inline: Rails.root.join('public/python1.svg').read %>
         <%= render inline: Rails.root.join('public/docker.svg').read %>
         <%= render inline: Rails.root.join('public/typescript.svg').read %>
