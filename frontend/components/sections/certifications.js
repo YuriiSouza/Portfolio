@@ -2,60 +2,41 @@ import { Award, BookOpen } from "lucide-react"
 
 const certifications = [
   {
-    name: "AWS Certified Solutions Architect",
-    issuer: "Amazon Web Services",
-    date: "2023",
+    name: "Scrum Fundamentals Certified",
+    issuer: "SCRUMstudy",
+    date: "2024",
     type: "certification",
-    logo: "/placeholder.svg?height=100&width=100&text=AWS",
+    logo: "/badge-SFC.png",
   },
   {
-    name: "Microsoft Certified: Azure Developer Associate",
-    issuer: "Microsoft",
+    name: "Python3",
+    issuer: "Curso em Video",
     date: "2022",
     type: "certification",
-    logo: "/placeholder.svg?height=100&width=100&text=Azure",
+    logo: "/cursoemvideo-logo.png",
   },
   {
-    name: "Professional Data Engineer",
-    issuer: "Google Cloud",
+    name: "Web development",
+    issuer: "Curso em Video",
     date: "2021",
     type: "certification",
-    logo: "/placeholder.svg?height=100&width=100&text=GCP",
+    logo: "/cursoemvideo-logo.png",
   },
   {
-    name: "Especialização em Engenharia de Software",
-    issuer: "Universidade de São Paulo (USP)",
-    date: "2020",
+    name: "Bacharelado em Engenharia de Software",
+    issuer: "UniEvangelica",
+    date: "2025",
     type: "education",
-    logo: "/placeholder.svg?height=100&width=100&text=USP",
-  },
-  {
-    name: "Bacharelado em Ciência da Computação",
-    issuer: "Universidade Estadual de Campinas (UNICAMP)",
-    date: "2016",
-    type: "education",
-    logo: "/placeholder.svg?height=100&width=100&text=UNICAMP",
+    logo: "/logo-universidade.png",
   },
 ]
 
 const courses = [
   {
-    name: "Machine Learning Engineering",
-    issuer: "Coursera (Stanford University)",
-    date: "2022",
-    logo: "/placeholder.svg?height=100&width=100&text=ML",
-  },
-  {
-    name: "Microservices Architecture",
-    issuer: "Udemy",
-    date: "2021",
-    logo: "/placeholder.svg?height=100&width=100&text=Micro",
-  },
-  {
-    name: "Advanced SQL for Data Analysis",
-    issuer: "DataCamp",
-    date: "2020",
-    logo: "/placeholder.svg?height=100&width=100&text=SQL",
+    name: "Data Analysis",
+    issuer: "Data Science Academy",
+    date: "2024",
+    logo: "logo-dataanalysis.png",
   },
 ]
 
@@ -81,7 +62,7 @@ export function Certifications() {
               <div key={index} className="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden">
                 <div className="flex">
                   <div className="bg-gradient-to-br from-blue-900 to-blue-800 p-4 flex items-center justify-center">
-                    <img src={edu.logo || "/placeholder.svg"} alt={edu.name} className="w-16 h-16" />
+                    <img src={edu.logo || "/placeholder.svg"} className="w-16 h-16" />
                   </div>
                   <div className="flex-1 p-4">
                     <h4 className="text-lg font-bold text-white">{edu.name}</h4>
@@ -106,7 +87,7 @@ export function Certifications() {
               <div key={index} className="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden">
                 <div className="flex">
                   <div className="bg-gradient-to-br from-green-900 to-green-800 p-4 flex items-center justify-center">
-                    <img src={cert.logo || "/placeholder.svg"} alt={cert.name} className="w-16 h-16" />
+                    <img src={cert.logo || "/placeholder.svg"} className="w-16 h-16" />
                   </div>
                   <div className="flex-1 p-4">
                     <h4 className="text-lg font-bold text-white">{cert.name}</h4>

@@ -1,63 +1,81 @@
 import { Database, ExternalLink, Github } from "lucide-react"
 
 const projects = [
-  {
-    name: "Sistema de Controle de Estoque com Dashboard de Indicadores",
-    description:
-      "Otimiza controle de produtos com baixa rotatividade e gera alertas automáticos para reposição. Implementa análise preditiva para sugerir compras baseadas em sazonalidade.",
-    tech: ["Python", "Flask", "PostgreSQL", "Dash", "Docker"],
-    highlights: [
-      "Redução de 30% em produtos obsoletos",
-      "Dashboard em tempo real",
-      "Alertas automáticos via email e SMS",
-      "Integração com fornecedores",
+    {
+    "name": "ERP + CRM Personalizado",
+    "description": "Desenvolvimento e implementação de um sistema ERP (Enterprise Resource Planning) e CRM (Customer Relationship Management) completo, atendendo a 3 clientes com landing pages dedicadas. A solução integra gestão de usuários, pedidos e estoque, além de funcionalidades para o envio de pedidos e comunicação via WhatsApp API oficial. O projeto foca em otimizar operações, centralizar informações e aprimorar o relacionamento com o cliente.",
+    "tech": ["Node.js", "Next.js", "NestJS", "Prisma", "Git", "MySQL", "WhatsApp API Oficial"],
+    "highlights": [
+      "Criação de soluções ERP e CRM escaláveis para múltiplos clientes.",
+      "Desenvolvimento de landing pages personalizadas para captação e envio de pedidos.",
+      "Implementação de funcionalidades de gestão de usuários, pedidos e estoque.",
+      "Integração com WhatsApp API oficial para comunicação e automação de processos."
     ],
-    github: "https://github.com/username/estoque-dashboard",
-    image: "/placeholder.svg?height=600&width=800&text=Dashboard+de+Estoque",
-  },
-  {
-    name: "Módulo de Faturamento e Integração com ERP",
-    description:
-      "Automatiza emissão de NF-e e cálculo de impostos conforme a legislação brasileira. Integra-se com múltiplos ERPs e sistemas legados.",
-    tech: ["Node.js", "MySQL", "API SEFAZ", "RabbitMQ"],
-    highlights: [
-      "Processamento de 10.000+ notas/mês",
-      "Validação automática de tributos",
-      "Redução de 95% em erros fiscais",
-      "Integração com SAP e Totvs",
+    "github": null,
+    "image": null
+    },
+    {
+      "name": "Portfolio",
+      "description": "Plataforma de portfólio pessoal para exibição e compartilhamento organizado de projetos, artigos, pesquisas e ideias. Oferece uma interface intuitiva e profissional para destacar trabalhos e experiências.",
+      "tech": ["Ruby on Rails", "Git"],
+      "highlights": [
+        "Desenvolvido para organizar e profissionalizar a apresentação de projetos.",
+        "Interface intuitiva para facilitar a exibição de trabalhos e experiências."
+      ],
+      "github": "https://github.com/YuriiSouza/Portfolio",
+      "image": null
+    },
+    {
+      "name": "SeuInvestimento",
+      "description": "Projeto que visa fornecer uma solução completa e acessível para melhorar a experiência de investimento dos usuários, capacitando-os a tomar decisões financeiras mais inteligentes. Oferece informações claras, orientação personalizada e acompanhamento detalhado da carteira de investimentos.",
+      "tech": ["Git", "PostgreSQL", "Docker", "Prisma", "UI/UX", "Angular", "NestJS", "Gestão de Projetos", "CSS"],
+      "highlights": [
+        "Solução completa para otimizar a experiência do usuário com investimentos.",
+        "Capacita usuários a tomar decisões financeiras inteligentes.",
+        "Oferece orientação personalizada e acompanhamento detalhado de portfólio."
+      ],
+      "github": "https://github.com/YOUR_SEUINVESTIMENTO_FRONTEND_REPO",
+      "image": null
+    },
+    {
+      "name": "Character Manager API",
+      "description": "API RESTful desenvolvida em Python com Flask para gerenciamento de personagens. Permite criar, editar, deletar e ler dados de personagens em um banco de dados PostgreSQL, utilizando a biblioteca Peewee.",
+      "tech": ["Git", "Flask", "PostgreSQL", "Python"],
+      "highlights": [
+        "API completa para operações CRUD em dados de personagens.",
+        "Integração com PostgreSQL para persistência de dados.",
+        "Utilização da biblioteca Peewee para ORM."
+      ],
+      "github": "https://github.com/YOUR_CHARACTER_MANAGER_API_REPO",
+      "image": null
+    },
+    {
+      "name": "Task List",
+      "description": "Uma lista de tarefas simples que permite adicionar, deletar e editar tarefas, além de marcá-las como concluídas.",
+      "tech": ["Node.js", "Express.js", "Pug", "JavaScript", "CSS"],
+      "highlights": [
+        "Funcionalidades básicas de gerenciamento de tarefas (CRUD).",
+        "Interface intuitiva para organização de atividades diárias.",
+        "Desenvolvido com tecnologia Node.js para o backend."
+      ],
+      "github": "https://github.com/YOUR_TASK_LIST_REPO",
+      "image": null
+    },
+    {
+    "name": "E-commerce de Joias",
+    "description": "Desenvolvimento completo de uma plataforma de e-commerce focada em joias, utilizando as últimas tecnologias para garantir uma experiência de usuário fluida e responsiva. O projeto inclui funcionalidades como catálogo de produtos, carrinho de compras, checkout e integração com sistemas de pagamento, com otimização para alta performance e SEO.",
+    "tech": ["React", "Next.js", "Tailwind", "Context API", "API de pagamento"],
+    "highlights": [
+      "Criação de interface de usuário moderna e otimizada para e-commerce.",
+      "Implementação de catálogo de produtos detalhado com funcionalidades de busca e filtro.",
+      "Fluxo de carrinho de compras e checkout intuitivo e seguro.",
+      "Foco em performance e SEO, essenciais para plataformas de vendas online."
     ],
-    github: "https://github.com/username/faturamento-erp",
-    image: "/placeholder.svg?height=600&width=800&text=Sistema+de+Faturamento",
-  },
-  {
-    name: "API de Integração para Marketplace",
-    description:
-      "Sistema que conecta ERPs de varejistas com múltiplos marketplaces, sincronizando estoque, preços e pedidos em tempo real.",
-    tech: ["C#", ".NET Core", "MongoDB", "Redis", "Azure"],
-    highlights: [
-      "Processamento de 500+ pedidos/hora",
-      "Sincronização em tempo real",
-      "Escalabilidade horizontal",
-      "Monitoramento e alertas",
-    ],
-    github: "https://github.com/username/marketplace-integration",
-    image: "/placeholder.svg?height=600&width=800&text=API+Marketplace",
-  },
-  {
-    name: "Sistema de Análise de Crédito Automatizado",
-    description:
-      "Plataforma que automatiza análise de crédito para pequenas empresas utilizando machine learning e dados financeiros.",
-    tech: ["Python", "Django", "PostgreSQL", "Scikit-learn", "Docker"],
-    highlights: [
-      "Redução de 70% no tempo de análise",
-      "Integração com bureaus de crédito",
-      "Dashboard para gestores",
-      "Modelos de ML com 92% de precisão",
-    ],
-    github: "https://github.com/username/credit-analysis",
-    image: "/placeholder.svg?height=600&width=800&text=Análise+de+Crédito",
-  },
-]
+    "github": null,
+    "image": null
+    }
+  ]
+
 
 export function Projects() {
   return (

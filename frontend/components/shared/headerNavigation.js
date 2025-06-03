@@ -17,12 +17,15 @@ import {
   Sun,
   Moon,
 } from "lucide-react"
+import { useTheme } from "next-themes"
 
 export function HeaderNavigation() {
   const [activeSection, setActiveSection] = useState("home")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isDark, setIsDark] = useState(true)
+  const [mounted, setMounted] = useState(false) // Estado para lidar com a hidratação
+  const { theme, setTheme } = useTheme()
+  const [isDark, setIsDark ] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,9 +45,18 @@ export function HeaderNavigation() {
     }
   }
 
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null 
+  }
+
   const toggleTheme = () => {
-    setIsDark(!isDark)
-    document.documentElement.classList.toggle("dark")
+    setTheme(theme === "dark" ? "light" : "dark")
+
+    setIsDark(theme === "dark" ? true : false)
   }
 
   const navItems = [
@@ -67,7 +79,7 @@ export function HeaderNavigation() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Code className="h-6 w-6 text-blue-400" />
-            <h1 className="text-xl font-bold text-white">DevBackend</h1>
+            <h1 className="text-xl font-bold text-white">Software Engineer</h1>
           </div>
 
           {/* Desktop Navigation */}

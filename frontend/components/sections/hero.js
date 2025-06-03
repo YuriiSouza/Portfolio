@@ -16,7 +16,6 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/placeholder.svg?height=1080&width=1920')" }}
         />
         <div className="absolute inset-0 bg-black/70" />
       </div>
@@ -25,7 +24,7 @@ export function Hero() {
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white">
-            Desenvolvedor Backend & <span className="text-blue-400">Especialista em Soluções de Negócios</span>
+            Desenvolvedor FullStack & <span className="text-blue-400">Especialista em Soluções de Negócios</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
             Transformando processos de negócios com automação, sistemas de gestão e análise de dados

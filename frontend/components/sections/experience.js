@@ -2,49 +2,34 @@ import { Briefcase, Calendar } from "lucide-react"
 
 const experiences = [
   {
-    company: "TechSolutions Brasil",
-    position: "Desenvolvedor Backend Sênior",
-    period: "2021 - Presente",
-    description:
-      "Lidero o desenvolvimento de sistemas de gestão empresarial e automação de processos para clientes de médio e grande porte.",
+    company: "ReGra Logística em Distribuição Ltda.",
+    position: "Analista de dados",
+    period: "2023 - Presente",
+    description: "Realizo o desenvolvimento de ferramentas de gestão empresarial e automação de processos, **especializado em otimização logística através de análise detalhada de dados operacionais**. Meu foco é **reduzir custos e aumentar a lucratividade**, aplicando tecnologias de ponta para eficiência e tomada de decisões estratégicas.",
     responsibilities: [
-      "Arquitetura e desenvolvimento de APIs RESTful para integração de sistemas legados com novas soluções",
-      "Implementação de microserviços para processamento de dados em larga escala",
       "Otimização de consultas SQL complexas, melhorando performance em 60%",
-      "Mentoria de desenvolvedores júnior e pleno",
+      "**Elaboração de planos de ação baseados em dados operacionais para otimizar processos logísticos.**"
     ],
-    technologies: ["Node.js", "Python", "PostgreSQL", "Docker", "AWS", "Kafka"],
-    logo: "/placeholder.svg?height=200&width=200&text=TS",
+    technologies: ["Python", "PostgreSQL", "Power"],
+    logo: "/logo-Ambev.png",
   },
   {
-    company: "FinTech Inovações",
+    company: "Fábrica de Tecnologias Turing (FTT) - UniEVANGÉLICA",
     position: "Engenheiro de Software",
-    period: "2018 - 2021",
+    period: "2021 - 2023",
     description:
-      "Trabalhei no desenvolvimento de soluções financeiras para automatização de processos bancários e sistemas de pagamento.",
+      "Trabalhei no desenvolvimento de soluções de gestão para uma clinica veterinária",
     responsibilities: [
-      "Desenvolvimento de sistema de conciliação bancária processando 100.000+ transações/dia",
-      "Implementação de gateway de pagamento com integração a múltiplos adquirentes",
-      "Criação de dashboard para análise de dados financeiros em tempo real",
-      "Implementação de testes automatizados, aumentando a cobertura para 90%",
-    ],
-    technologies: ["Java", "Spring Boot", "MySQL", "RabbitMQ", "Docker", "Jenkins"],
+      "**Desenvolvimento e implementação de uma API RESTful para o gerenciamento completo de clínica veterinária.**",
+      "Engenharia e modelagem de dados para armazenamento eficiente de informações de pacientes, agendamentos, estoque de medicamentos e transações financeiras.",
+      "Criação de endpoints para manipulação de dados de clientes, animais, serviços, produtos e agendamentos.",
+      "Integração com sistemas de terceiros para funcionalidades específicas, como envio de notificações.",
+      "Implementação de lógica de negócios robusta para processamento de consultas, vacinações e vendas.",
+      "Otimização de performance do banco de dados para garantir respostas rápidas e escalabilidade."
+  ],
+    technologies: [ "**Node.js**",
+    "**MongoDB**", "Nest.js", "Prisma", "Redis", "Postman/Insomnia","Git"],
     logo: "/placeholder.svg?height=200&width=200&text=FT",
-  },
-  {
-    company: "Retail Systems",
-    position: "Desenvolvedor Backend",
-    period: "2016 - 2018",
-    description:
-      "Participei do desenvolvimento de sistemas de gestão para o setor de varejo, com foco em controle de estoque e vendas.",
-    responsibilities: [
-      "Desenvolvimento de módulos para ERP proprietário utilizado por 50+ lojas",
-      "Implementação de integração com e-commerce e marketplaces",
-      "Automação de relatórios de vendas diários com Python e Excel",
-      "Migração de sistema legado para arquitetura moderna baseada em APIs",
-    ],
-    technologies: ["C#", ".NET", "SQL Server", "Python", "Azure"],
-    logo: "/placeholder.svg?height=200&width=200&text=RS",
   },
 ]
 

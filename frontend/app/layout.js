@@ -6,8 +6,8 @@ import { HeaderNavigation } from "@/components/shared/headerNavigation"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Portfolio de Desenvolvedor Backend",
-  description: "Portfolio profissional com foco em soluções de negócios e automação",
+  title: "Yuri Souza",
+  description: "Portfolio profissional",
 }
 
 export default function RootLayout({

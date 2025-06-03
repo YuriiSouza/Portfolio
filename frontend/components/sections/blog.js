@@ -9,7 +9,7 @@ const posts = [
     date: "10 Mai 2023",
     tags: ["SQL", "Performance", "Banco de Dados"],
     readTime: "8 min",
-    image: "/placeholder.svg?height=400&width=600&text=SQL+Optimization",
+    image: "",
   },
   {
     title: "Arquitetura de Microserviços para Sistemas de Gestão",
@@ -17,7 +17,7 @@ const posts = [
     date: "22 Mar 2023",
     tags: ["Microserviços", "Arquitetura", "Backend"],
     readTime: "12 min",
-    image: "/placeholder.svg?height=400&width=600&text=Microservices",
+    image: "",
   },
   {
     title: "Integrando ERPs Legados com APIs Modernas",
@@ -25,7 +25,7 @@ const posts = [
     date: "05 Fev 2023",
     tags: ["Integração", "API", "ERP"],
     readTime: "10 min",
-    image: "/placeholder.svg?height=400&width=600&text=API+Integration",
+    image: "",
   },
   {
     title: "Análise Preditiva para Gestão de Estoque",
@@ -33,7 +33,7 @@ const posts = [
     date: "18 Dez 2022",
     tags: ["Machine Learning", "Análise de Dados", "Varejo"],
     readTime: "15 min",
-    image: "/placeholder.svg?height=400&width=600&text=Predictive+Analysis",
+    image: "",
   },
 ]
 

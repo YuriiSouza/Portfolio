@@ -19,11 +19,9 @@ export function TechStack() {
             <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm">Node.js</span>
             <span className="px-3 py-1 bg-green-600 text-white rounded-full text-sm">Python</span>
             <span className="px-3 py-1 bg-purple-600 text-white rounded-full text-sm">C#</span>
-            <span className="px-3 py-1 bg-orange-600 text-white rounded-full text-sm">Java</span>
             <span className="px-3 py-1 bg-red-600 text-white rounded-full text-sm">Ruby on Rails</span>
             <span className="px-3 py-1 bg-blue-500 text-white rounded-full text-sm">Express</span>
             <span className="px-3 py-1 bg-green-500 text-white rounded-full text-sm">Django</span>
-            <span className="px-3 py-1 bg-blue-700 text-white rounded-full text-sm">.NET Core</span>
           </div>
         </div>
 
@@ -40,7 +38,6 @@ export function TechStack() {
             <span className="px-3 py-1 bg-red-600 text-white rounded-full text-sm">Redis</span>
             <span className="px-3 py-1 bg-orange-600 text-white rounded-full text-sm">SQLite</span>
             <span className="px-3 py-1 bg-purple-600 text-white rounded-full text-sm">SQL Server</span>
-            <span className="px-3 py-1 bg-yellow-600 text-white rounded-full text-sm">DynamoDB</span>
           </div>
         </div>
 
@@ -52,9 +49,6 @@ export function TechStack() {
           </div>
           <div className="flex flex-wrap gap-2">
             <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm">REST</span>
-            <span className="px-3 py-1 bg-pink-600 text-white rounded-full text-sm">GraphQL</span>
-            <span className="px-3 py-1 bg-purple-600 text-white rounded-full text-sm">Webhooks</span>
-            <span className="px-3 py-1 bg-green-600 text-white rounded-full text-sm">gRPC</span>
             <span className="px-3 py-1 bg-orange-600 text-white rounded-full text-sm">ERPs</span>
             <span className="px-3 py-1 bg-blue-500 text-white rounded-full text-sm">CRMs</span>
             <span className="px-3 py-1 bg-green-500 text-white rounded-full text-sm">Gateways de Pagamento</span>
@@ -70,10 +64,9 @@ export function TechStack() {
           <div className="flex flex-wrap gap-2">
             <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm">Python (Pandas)</span>
             <span className="px-3 py-1 bg-yellow-600 text-white rounded-full text-sm">Python (NumPy)</span>
-            <span className="px-3 py-1 bg-blue-500 text-white rounded-full text-sm">Power BI</span>
+            <span className="px-3 py-1 bg-blue-500 text-white rounded-full text-sm">Power</span>
             <span className="px-3 py-1 bg-orange-600 text-white rounded-full text-sm">SQL Avançado</span>
             <span className="px-3 py-1 bg-blue-700 text-white rounded-full text-sm">Jupyter Notebooks</span>
-            <span className="px-3 py-1 bg-green-600 text-white rounded-full text-sm">Tableau</span>
           </div>
         </div>
 
@@ -88,10 +81,20 @@ export function TechStack() {
             <span className="px-3 py-1 bg-orange-600 text-white rounded-full text-sm">Git</span>
             <span className="px-3 py-1 bg-black text-white rounded-full text-sm">Linux</span>
             <span className="px-3 py-1 bg-blue-500 text-white rounded-full text-sm">CI/CD</span>
-            <span className="px-3 py-1 bg-orange-500 text-white rounded-full text-sm">RabbitMQ</span>
-            <span className="px-3 py-1 bg-blue-700 text-white rounded-full text-sm">Kafka</span>
-            <span className="px-3 py-1 bg-green-600 text-white rounded-full text-sm">AWS</span>
-            <span className="px-3 py-1 bg-purple-600 text-white rounded-full text-sm">Azure</span>
+          </div>
+        </div>
+
+        {/* Web */}
+        <div className="bg-gradient-to-br from-red-900/20 to-red-800/10 border border-red-800/30 rounded-lg p-6">
+          <div className="flex items-center gap-2 mb-4">
+            <Server className="h-5 w-5 text-red-400" />
+            <h3 className="text-xl font-semibold text-white">Web</h3>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <span className="px-3 py-1 bg-blue-600 text-white rounded-full text-sm">Nextjs</span>
+            <span className="px-3 py-1 bg-orange-600 text-white rounded-full text-sm">React</span>
+            <span className="px-3 py-1 bg-black text-white rounded-full text-sm">Ruby on Rails</span>
+            <span className="px-3 py-1 bg-blue-500 text-white rounded-full text-sm">UI/UX</span>
           </div>
         </div>
       </div>

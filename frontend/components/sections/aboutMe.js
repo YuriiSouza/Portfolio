@@ -12,7 +12,7 @@ export function AboutMe() {
         <div className="md:col-span-1 order-1 md:order-none">
           <div className="rounded-lg overflow-hidden aspect-square relative mb-4">
             <img
-              src="/placeholder.svg?height=400&width=400"
+              src="/me.jpeg"
               alt="Foto de perfil"
               className="object-cover w-full h-full"
             />
@@ -21,7 +21,7 @@ export function AboutMe() {
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
                 <MapPin className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">São Paulo, Brasil</span>
+                <span className="text-gray-300">Goias, Brasil</span>
               </div>
               <div className="flex items-center gap-2">
                 <Code className="h-5 w-5 text-blue-400" />
@@ -33,7 +33,7 @@ export function AboutMe() {
                   <li>Desenvolver soluções de alto impacto</li>
                   <li>Especialização em sistemas de gestão</li>
                   <li>Aprimorar habilidades em análise de dados</li>
-                  <li>Contribuir com projetos open source</li>
+                  <li>Criação de Websites</li>
                 </ul>
               </div>
             </div>
@@ -67,6 +67,9 @@ export function AboutMe() {
               </span>
               <span className="px-3 py-1 bg-blue-600/20 text-blue-400 border border-blue-600/30 rounded-full text-sm">
                 Integração de APIs
+              </span>
+              <span className="px-3 py-1 bg-blue-600/20 text-blue-400 border border-blue-600/30 rounded-full text-sm">
+                WebSites
               </span>
             </div>
           </div>
