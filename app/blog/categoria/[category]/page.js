@@ -16,7 +16,7 @@ const categoryPosts = [
     readTime: "8 min",
     category: "Backend",
     tags: ["SQL", "Performance", "Banco de Dados"],
-    image: "/placeholder.svg?height=400&width=600&text=SQL+Optimization",
+    image: "",
   },
   {
     id: 5,
@@ -27,7 +27,7 @@ const categoryPosts = [
     readTime: "9 min",
     category: "Backend",
     tags: ["Redis", "Cache", "Node.js", "Performance"],
-    image: "/placeholder.svg?height=400&width=600&text=Redis+Cache",
+    image: "",
   },
   // Mais posts...
 ]

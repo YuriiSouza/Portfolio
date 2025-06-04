@@ -63,7 +63,7 @@ const blogPost = {
   readTime: "8 min",
   category: "Backend",
   tags: ["SQL", "Performance", "Banco de Dados", "Otimização"],
-  image: "/placeholder.svg?height=400&width=800&text=SQL+Optimization",
+  image: "",
   views: 1250,
   likes: 89,
   bookmarks: 34,
@@ -145,7 +145,7 @@ export default function BlogPostPage() {
             {/* Featured Image */}
             <div className="mb-8 rounded-lg overflow-hidden">
               <img
-                src={blogPost.image || "/placeholder.svg"}
+                src={blogPost.image}
                 alt={blogPost.title}
                 className="w-full h-64 md:h-96 object-cover"
               />
@@ -177,11 +177,6 @@ export default function BlogPostPage() {
             {/* Author Bio */}
             <div className="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-8">
               <div className="flex items-start gap-4">
-                <img
-                  src="/placeholder.svg?height=80&width=80&text=Author"
-                  alt={blogPost.author}
-                  className="w-16 h-16 rounded-full"
-                />
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2">{blogPost.author}</h3>
                   <p className="text-gray-400 mb-4">
