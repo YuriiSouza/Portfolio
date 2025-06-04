@@ -56,7 +56,7 @@ const popularTags = [
   "JWT",
 ]
 
-export default function CategoryPage({ params }: { params: { category: string } }) {
+export default function CategoryPage({ params }) {
   const categoryName = decodeURIComponent(params.category)
 
   return (
