@@ -65,21 +65,25 @@ export function HeaderNavigation() {
     { id: "projects", label: "Projetos", icon: Database },
     { id: "case-studies", label: "Estudos de Caso", icon: BarChart2 },
     { id: "experience", label: "Experiência", icon: Briefcase },
-    { id: "blog", label: "Blog", icon: FileText },
+    // { id: "blog", label: "Blog", icon: FileText },
   ]
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-gray-900/80 backdrop-blur-md shadow-lg border-b border-gray-700" : "bg-transparent"
-      }`}
+        isScrolled
+          ? "bg-gray-900/80 backdrop-blur-md shadow-lg border-b border-gray-700 dark:bg-gray-900/80 dark:border-gray-700"
+          : "bg-background/80 backdrop-blur-md dark:bg-background/80"
+      } border-b border-transparent dark:border-transparent`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Code className="h-6 w-6 text-blue-400" />
-            <h1 className="text-xl font-bold text-white">Software Engineer</h1>
+            <h1 className="text-xl font-bold text-gray-900 dark:text-white">
+              Software Engineer
+            </h1>
           </div>
 
           {/* Desktop Navigation */}
@@ -91,7 +95,7 @@ export function HeaderNavigation() {
                 className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   activeSection === item.id
                     ? "bg-blue-600/20 text-blue-400"
-                    : "text-gray-300 hover:text-white hover:bg-gray-800"
+                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-200 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800"
                 }`}
               >
                 <item.icon className="h-4 w-4" />
@@ -100,7 +104,7 @@ export function HeaderNavigation() {
             ))}
             <button
               onClick={toggleTheme}
-              className="ml-2 p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800 transition-colors"
+              className="ml-2 p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-200 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800 transition-colors"
             >
               {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </button>
@@ -110,13 +114,13 @@ export function HeaderNavigation() {
           <div className="flex items-center gap-2 md:hidden">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-200 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800 transition-colors"
             >
               {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-200 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800 transition-colors"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -126,7 +130,9 @@ export function HeaderNavigation() {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-900/95 backdrop-blur-md shadow-lg border-t border-gray-700">
+        <div
+          className={`md:hidden bg-background/95 backdrop-blur-md shadow-lg border-t border-gray-200 dark:bg-background/95 dark:border-gray-700`}
+        >
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-2">
             {navItems.map((item) => (
               <button
@@ -135,7 +141,7 @@ export function HeaderNavigation() {
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   activeSection === item.id
                     ? "bg-blue-600/20 text-blue-400"
-                    : "text-gray-300 hover:text-white hover:bg-gray-800"
+                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-200 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800"
                 }`}
               >
                 <item.icon className="h-4 w-4" />

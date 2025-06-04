@@ -82,33 +82,32 @@ export function Projects() {
     <section id="projects" className="py-10 pt-20">
       <div className="flex items-center gap-3 mb-6">
         <Database className="h-6 w-6 text-blue-400" />
-        <h2 className="text-3xl font-bold text-white">Projetos Destacados</h2>
+        <h2 className="text-3xl font-bold">Projetos Destacados</h2>
       </div>
 
       <div className="space-y-12">
         {projects.map((project, index) => (
-          <div key={index} className="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden">
+          <div key={index} className="card border border-gray-700 rounded-lg overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
               <div className="h-64 md:h-auto">
                 <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.name}
+                  src={project.image}
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="flex flex-col p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-bold text-white mb-2">{project.name}</h3>
-                  <p className="text-gray-400">{project.description}</p>
+                  <h3 className="text-xl font-bold mb-2">{project.name}</h3>
+                  <p className="muted">{project.description}</p>
                 </div>
                 <div className="flex-grow">
                   <div className="mb-4">
-                    <h4 className="text-sm font-medium mb-2 text-white">Tecnologias:</h4>
+                    <h4 className="text-sm font-medium mb-2 ">Tecnologias:</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech, i) => (
                         <span
                           key={i}
-                          className="px-2 py-1 bg-gray-700 text-gray-300 border border-gray-600 rounded text-sm"
+                          className="techCard px-2 py-1 border border-gray-600 rounded text-sm"
                         >
                           {tech}
                         </span>
@@ -116,8 +115,8 @@ export function Projects() {
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-sm font-medium mb-2 text-white">Destaques:</h4>
-                    <ul className="list-disc list-inside space-y-1 text-gray-400">
+                    <h4 className="text-sm font-medium mb-2 ">Destaques:</h4>
+                    <ul className="muted list-disc list-inside space-y-1">
                       {project.highlights.map((highlight, i) => (
                         <li key={i}>{highlight}</li>
                       ))}

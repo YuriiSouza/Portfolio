@@ -2,7 +2,6 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  /* Opcional: Adicione transições suaves aqui para as propriedades que mudam de cor */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -14,85 +13,104 @@ body {
 
 @layer base {
   :root {
-    /* -- NOVAS CORES PARA O TEMA CLARO -- */
-    --background: 0 0% 98%; /* Um branco mais suave, quase off-white */
-    --foreground: 220 10% 10%; /* Um cinza escuro para texto */
+    /* -- CORES PARA O TEMA CLARO (HEXADECIMAL) -- */
+    --background: #FFFFFF;
+    --foreground: #26292E;
+    --card: #FAFAFA;
+    --card-foreground: #26292E;
+    --popover: #FFFFFF;
+    --popover-foreground: #26292E;
+    --primary: #1F63C4;
+    --primary-foreground: #FFFFFF;
+    --secondary: #E6E9EB;
+    --secondary-foreground: #33373D;
+    --muted: #F2F4F5;
+    --muted-foreground: #7F8287;
+    --accent: #E6E9EB;
+    --accent-foreground: #26292E;
+    --destructive: #E63D33;
+    --destructive-foreground: #FFFFFF;
+    --border: #D9DBDE;
+    --input: #D9DBDE;
+    --ring: #1F63C4;
 
-    --card: 0 0% 100%; /* Cartão ainda branco */
-    --card-foreground: 220 10% 10%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 10% 10%;
-
-    --primary: 220 80% 40%; /* Um azul médio para primário */
-    --primary-foreground: 0 0% 100%; /* Texto branco para primário */
-
-    --secondary: 210 20% 90%; /* Um cinza claro para secundário */
-    --secondary-foreground: 220 10% 10%;
-
-    --muted: 210 20% 95%; /* Um cinza muito claro para muted */
-    --muted-foreground: 220 5% 50%; /* Um cinza médio para muted text */
-
-    --accent: 210 20% 90%;
-    --accent-foreground: 220 10% 10%;
-
-    --destructive: 0 84.2% 60.2%; /* Vermelho para destructive */
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 210 10% 85%; /* Uma borda cinza claro */
-    --input: 210 10% 85%;
-    --ring: 220 80% 40%; /* Anel com a cor primária */
-
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    /* Outras variáveis (Mantenha as suas se ainda usar) */
+    --chart-1: #E26B49;
+    --chart-2: #2A9E82;
+    --chart-3: #27556D;
+    --chart-4: #F4D066;
+    --chart-5: #F7AA61;
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: #FAFAFA;
+    --sidebar-foreground: #3F4045;
+    --sidebar-primary: #18191C;
+    --sidebar-primary-foreground: #FAFAFA;
+    --sidebar-accent: #F0F1F2;
+    --sidebar-accent-foreground: #18191C;
+    --sidebar-border: #E6E9EB;
+    --sidebar-ring: #2484E4;
   }
 
   .dark {
-    /* -- CORES DO TEMA ESCURO (MANTIDAS COMO ESTAVAM) -- */
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* -- CORES PARA O TEMA ESCURO (HEXADECIMAL) -- */
+    --background: #0A0A0A;
+    --foreground: #FAFAFA;
+    --card: #0A0A0A;
+    --card-foreground: #FAFAFA;
+    --popover: #0A0A0A;
+    --popover-foreground: #FAFAFA;
+    --primary: #FAFAFA;
+    --primary-foreground: #17171A;
+    --secondary: #262629;
+    --secondary-foreground: #FAFAFA;
+    --muted: #262629;
+    --muted-foreground: #A3A3A6;
+    --accent: #262629;
+    --accent-foreground: #FAFAFA;
+    --destructive: #882A2A;
+    --destructive-foreground: #FAFAFA;
+    --border: #262629;
+    --input: #262629;
+    --ring: #D4D4D7;
+
+    --chart-1: #2660B3;
+    --chart-2: #1C9B76;
+    --chart-3: #D88A3B;
+    --chart-4: #A24DC8;
+    --chart-5: #CD406D;
+
+    --sidebar-background: #18191C;
+    --sidebar-foreground: #F0F1F2;
+    --sidebar-primary: #1C5DCD;
+    --sidebar-primary-foreground: #FFFFFF;
+    --sidebar-accent: #27282C;
+    --sidebar-accent-foreground: #F0F1F2;
+    --sidebar-border: #27282C;
+    --sidebar-ring: #2484E4;
+  }
+
+  /* Aplicação das variáveis CSS no body */
+  body {
+    color: var(--foreground); /* Use var() diretamente */
+    background-color: var(--background); /* Use var() diretamente */
+  }
+
+  h2, h3 {
+    color: var(--text-color);
+  }
+
+  .card {
+    background-color: var(--card);
+    color: var(--car-foreground); /* Use var() diretamente */
+  }
+
+  .muted {
+    color: var(--muted-foreground)
+  }
+
+  .techCard {
+    background-color: var(--muted);
+    color: var(--muted-foreground)
   }
 }

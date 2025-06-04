@@ -38,33 +38,33 @@ export function Experience() {
     <section id="experience" className="py-10 pt-20">
       <div className="flex items-center gap-3 mb-6">
         <Briefcase className="h-6 w-6 text-blue-400" />
-        <h2 className="text-3xl font-bold text-white">Experiência Profissional</h2>
+        <h2 className="text-3xl font-bold">Experiência Profissional</h2>
       </div>
 
       <div className="space-y-6">
         {experiences.map((exp, index) => (
-          <div key={index} className="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden">
+          <div key={index} className="card border border-gray-700 rounded-lg overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
               <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 flex items-center justify-center">
-                <img src={exp.logo || "/placeholder.svg"} alt={exp.company} className="w-24 h-24 rounded-full" />
+                <img src={exp.logo} alt={exp.company} className="w-24 h-24 rounded-full" />
               </div>
               <div className="md:col-span-3 p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-white">{exp.position}</h3>
-                    <p className="text-lg font-medium text-gray-400 mt-1">{exp.company}</p>
+                    <h3 className="text-xl font-bold ">{exp.position}</h3>
+                    <p className="text-lg font-medium muted mt-1">{exp.company}</p>
                   </div>
-                  <div className="flex items-center gap-1 text-gray-400">
+                  <div className="flex items-center gap-1 muted">
                     <Calendar className="h-4 w-4" />
                     <span>{exp.period}</span>
                   </div>
                 </div>
                 <div className="space-y-4">
-                  <p className="text-gray-300">{exp.description}</p>
+                  <p className="">{exp.description}</p>
 
                   <div>
-                    <h4 className="font-medium mb-2 text-white">Responsabilidades:</h4>
-                    <ul className="list-disc list-inside space-y-1 text-gray-400">
+                    <h4 className="font-medium mb-2">Responsabilidades:</h4>
+                    <ul className="list-disc list-inside space-y-1">
                       {exp.responsibilities.map((resp, i) => (
                         <li key={i}>{resp}</li>
                       ))}
@@ -72,7 +72,7 @@ export function Experience() {
                   </div>
 
                   <div>
-                    <h4 className="font-medium mb-2 text-white">Tecnologias:</h4>
+                    <h4 className="font-medium mb-2">Tecnologias:</h4>
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech, i) => (
                         <span

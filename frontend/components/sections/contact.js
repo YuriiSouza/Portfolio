@@ -13,7 +13,7 @@ export function Contact() {
           <Mail className="h-6 w-6 text-blue-400" />
           <h2 className="text-3xl font-bold text-white">Contato</h2>
         </div>
-        <div className="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden p-6 text-center min-h-[300px] flex items-center justify-center">
+        <div className="card border border-gray-700 rounded-lg overflow-hidden p-6 text-center min-h-[300px] flex items-center justify-center">
           <p className="text-2xl font-bold text-white">
             Mensagem enviada com sucesso! Obrigado por entrar em contato.
           </p>
@@ -26,17 +26,17 @@ export function Contact() {
     <section id="contact" className="py-10 pt-20">
       <div className="flex items-center gap-3 mb-6">
         <Mail className="h-6 w-6 text-blue-400" />
-        <h2 className="text-3xl font-bold text-white">Contato</h2>
+        <h2 className="text-3xl font-bold">Contato</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="md:col-span-2">
-          <div className="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden">
+          <div className="card border border-gray-700 rounded-lg overflow-hidden">
             <div className="relative h-40">
-              <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex items-center p-6">
+              <div className="absolute inset-0 card flex items-center p-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-white">Vamos Trabalhar Juntos</h3>
-                  <p className="text-gray-300">Preencha o formulário para iniciar uma conversa</p>
+                  <h3 className="text-2xl font-bold">Vamos Trabalhar Juntos</h3>
+                  <p className="muted">Preencha o formulário para iniciar uma conversa</p>
                 </div>
               </div>
             </div>
@@ -46,7 +46,7 @@ export function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {/* Novo campo para o Nome */}
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-white">
+                    <label htmlFor="name" className="text-sm font-medium">
                       Nome
                     </label>
                     <input
@@ -54,7 +54,7 @@ export function Contact() {
                       type="text"
                       name="Nome"
                       placeholder="Seu nome"
-                      className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 card border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       required // Torna o campo obrigatório
                     />
                     {/* Exibe erros de validação para o campo 'Nome' */}
@@ -68,7 +68,7 @@ export function Contact() {
                   
                   {/* Campo de Email */}
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-white">
+                    <label htmlFor="email" className="text-sm font-medium">
                       Email
                     </label>
                     <input
@@ -76,7 +76,7 @@ export function Contact() {
                       type="email"
                       name="Email" // Adicione o atributo 'name' para o Formspree
                       placeholder="seu.email@exemplo.com"
-                      className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 card border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       required // Torna o campo obrigatório
                     />
                     {/* Exibe erros de validação para o campo 'Email' */}
@@ -91,7 +91,7 @@ export function Contact() {
 
                 {/* Campo de Assunto */}
                 <div className="space-y-2">
-                  <label htmlFor="subject" className="text-sm font-medium text-white">
+                  <label htmlFor="subject" className="text-sm font-medium">
                     Assunto
                   </label>
                   <input
@@ -99,7 +99,7 @@ export function Contact() {
                     type="text"
                     name="Assunto"
                     placeholder="Assunto da mensagem"
-                    className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 card border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                   {/* Exibe erros de validação para o campo 'Assunto' */}
                   <ValidationError 
@@ -112,7 +112,7 @@ export function Contact() {
 
                 {/* Campo de Mensagem */}
                 <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium text-white">
+                  <label htmlFor="message" className="text-sm font-medium">
                     Mensagem
                   </label>
                   <textarea
@@ -120,7 +120,7 @@ export function Contact() {
                     rows={5}
                     name="Mensagem" 
                     placeholder="Escreva sua mensagem aqui..."
-                    className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                    className="w-full px-3 py-2 card border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                     required 
                   />
                   <ValidationError 
@@ -151,23 +151,23 @@ export function Contact() {
         </div>
 
         <div>
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-6 h-full">
-            <h3 className="text-xl font-bold text-white mb-2">Informações de Contato</h3>
-            <p className="text-gray-400 mb-6">Outras formas de entrar em contato comigo.</p>
+          <div className="card border border-gray-700 rounded-lg p-6 h-full">
+            <h3 className="text-xl font-bold mb-2">Informações de Contato</h3>
+            <p className="muted mb-6">Outras formas de entrar em contato comigo.</p>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <MapPin className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">Goiás, Brasil</span>
+                <span className="muted">Goiás, Brasil</span>
               </div>
 
               <div className="pt-4">
-                <h4 className="text-sm font-medium text-white mb-3">Redes Sociais</h4>
+                <h4 className="text-sm font-medium mb-3">Redes Sociais</h4>
                 <div className="flex flex-col gap-3">
                   <a
                     href="https://github.com/YuriiSouza"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-gray-300 hover:text-white hover:underline transition-colors"
+                    className="flex items-center gap-3 muted hover:text-gray-900 hover:underline transition-colors"
                   >
                     <Github className="h-5 w-5 text-blue-400" />
                     <span>GitHub</span>
@@ -176,7 +176,7 @@ export function Contact() {
                     href="https://www.linkedin.com/in/yuri-souza-b33013215/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-gray-300 hover:text-white hover:underline transition-colors"
+                    className="flex items-center gap-3 muted hover:text-gray-900 hover:underline transition-colors"
                   >
                     <Linkedin className="h-5 w-5 text-blue-400" />
                     <span>LinkedIn</span>

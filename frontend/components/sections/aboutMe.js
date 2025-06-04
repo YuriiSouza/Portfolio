@@ -1,11 +1,23 @@
+"use client"
+
 import { User, MapPin, Code } from "lucide-react"
+import { useTheme } from "next-themes"
+import { useEffect, useState } from "react"
 
 export function AboutMe() {
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false) // Estado para lidar com a hidratação
+  
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   return (
     <section id="about" className="relative py-10 pt-20">
       <div className="flex items-center gap-3 mb-6">
         <User className="h-6 w-6 text-blue-400" />
-        <h2 className="text-3xl font-bold text-white">Sobre Mim</h2>
+        <h2 className="text-3xl font-bold">Sobre Mim</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -17,19 +29,19 @@ export function AboutMe() {
               className="object-cover w-full h-full"
             />
           </div>
-          <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
+          <div className="card border border-gray-700 rounded-lg p-6">
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
                 <MapPin className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">Goias, Brasil</span>
+                <span className="">Goias, Brasil</span>
               </div>
               <div className="flex items-center gap-2">
                 <Code className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-300">5+ anos de experiência</span>
+                <span className="">5+ anos de experiência</span>
               </div>
               <div className="mt-4">
-                <h3 className="font-medium mb-2 text-white">Objetivos</h3>
-                <ul className="list-disc list-inside space-y-1 text-gray-400">
+                <h3 className="font-medium mb-2">Objetivos</h3>
+                <ul className="list-disc list-inside space-y-1">
                   <li>Desenvolver soluções de alto impacto</li>
                   <li>Especialização em sistemas de gestão</li>
                   <li>Aprimorar habilidades em análise de dados</li>
@@ -41,13 +53,13 @@ export function AboutMe() {
         </div>
 
         <div className="md:col-span-2">
-          <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
-            <p className="text-lg mb-4 text-gray-300">
+          <div className="card border border-gray-700 rounded-lg p-6">
+            <p className="text-lg mb-4 ">
               Desenvolvedor de software com foco em backend e dados, apaixonado por criar soluções que otimizam
               processos de gestão e negócios. Experiência com ERP, sistemas internos e automações que geram valor para
               empresas.
             </p>
-            <p className="mb-4 text-gray-300">
+            <p className="mb-4">
               Especializado em desenvolver soluções robustas para problemas complexos de negócios, com foco em
               escalabilidade, segurança e performance. Minha abordagem combina conhecimento técnico com entendimento de
               processos de negócio para entregar sistemas que realmente fazem diferença.

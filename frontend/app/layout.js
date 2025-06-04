@@ -15,8 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${inter.className} dark`}>
-        <ThemeProviders attribute="class" defaultTheme="dark" enableSystem={false}>
+      <head />
+      <body className={`${inter.className}`}>
+        <ThemeProviders attribute="class" defaultTheme="system" enableSystem>
           <div className="min-h-screen bg-background">
             <div className="container mx-auto">{children}</div>
           </div>
