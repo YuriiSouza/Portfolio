@@ -13,6 +13,7 @@ export function CaseStudies() {
         <div className="card border border-gray-700 rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
             <div className="relative h-64 lg:h-auto overflow-hidden">
+                <img src="ambev-project-image.png"></img>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                 <div>
                   <span className="px-3 py-1 bg-blue-600 rounded-full text-sm mb-2 inline-block text-white">

@@ -29,7 +29,7 @@ const experiences = [
   ],
     technologies: [ "**Node.js**",
     "**MongoDB**", "Nest.js", "Prisma", "Redis", "Postman/Insomnia","Git"],
-    logo: "/placeholder.svg?height=200&width=200&text=FT",
+    logo: "/logo-ftt.png",
   },
 ]
 
