@@ -24,7 +24,7 @@ export function AboutMe() {
         <div className="md:col-span-1 order-1 md:order-none">
           <div className="rounded-lg overflow-hidden aspect-square relative mb-4">
             <img
-              src="/me.png"
+              src="/me.jpeg"
               alt="Foto de perfil"
               className="object-cover w-full h-full"
             />

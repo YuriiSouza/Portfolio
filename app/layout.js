@@ -1,13 +1,13 @@
 import "@/app/globals.css"
 import { Inter } from "next/font/google"
 import { ThemeProviders } from "@/components/theme-provider"
-import { HeaderNavigation } from "@/components/shared/headerNavigation"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Yuri Souza",
-  description: "Portfolio profissional",
+  title: "Yuri Peixoto de Souza — Planejamento Financeiro & Desenvolvimento de Software",
+  description:
+    "Planejador financeiro e desenvolvedor de software. Ajudo pessoas a assumirem o controle da própria vida financeira com uma abordagem baseada em dados, planejamento e acompanhamento contínuo.",
 }
 
 export default function RootLayout({
@@ -18,9 +18,7 @@ export default function RootLayout({
       <head />
       <body className={`${inter.className}`}>
         <ThemeProviders attribute="class" defaultTheme="system" enableSystem>
-          <div className="min-h-screen bg-background">
-            <div className="container mx-auto">{children}</div>
-          </div>
+          {children}
         </ThemeProviders>
       </body>
     </html>

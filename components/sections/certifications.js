@@ -2,6 +2,13 @@ import { Award, BookOpen } from "lucide-react"
 
 const certifications = [
   {
+    name: "CPA - Certificação Profissional ANBIMA",
+    issuer: "ANBIMA",
+    date: "2026",
+    type: "certification",
+    logo: "/anbima.png",
+  },
+  {
     name: "Scrum Fundamentals Certified",
     issuer: "SCRUMstudy",
     date: "2024",
@@ -62,7 +69,7 @@ export function Certifications() {
               <div key={index} className="card border border-gray-700 rounded-lg overflow-hidden">
                 <div className="flex">
                   <div className="bg-gradient-to-br from-blue-900 to-blue-800 p-4 flex items-center justify-center">
-                    <img src={edu.logo} className="w-16 h-16" />
+                    <img src={edu.logo} alt={edu.name} className="w-16 h-16 object-contain" />
                   </div>
                   <div className="flex-1 p-4">
                     <h4 className="text-lg font-bold ">{edu.name}</h4>
@@ -87,7 +94,13 @@ export function Certifications() {
               <div key={index} className="card border border-gray-700 rounded-lg overflow-hidden">
                 <div className="flex">
                   <div className="bg-gray-900 p-4 flex items-center justify-center">
-                    <img src={cert.logo} className="w-16 h-16" />
+                    {cert.logo ? (
+                      <img src={cert.logo} alt={cert.name} className="w-16 h-16 object-contain" />
+                    ) : (
+                      <div className="w-16 h-16 rounded-full bg-blue-600/20 border border-blue-600/30 flex items-center justify-center">
+                        <Award className="h-8 w-8 text-blue-300" />
+                      </div>
+                    )}
                   </div>
                   <div className="flex-1 p-4">
                     <h4 className="text-lg font-bold">{cert.name}</h4>
@@ -112,7 +125,7 @@ export function Certifications() {
           {courses.map((course, index) => (
             <div key={index} className="card border border-gray-700 rounded-lg overflow-hidden">
               <div className="bg-gradient-to-br from-blue-900 to-blue-800 p-4 flex items-center justify-center h-32">
-                <img src={course.logo} alt={course.name} className="w-20 h-20" />
+                <img src={course.logo} alt={course.name} className="w-20 h-20 object-contain" />
               </div>
               <div className="p-4">
                 <h4 className="text-lg font-bold">{course.name}</h4>

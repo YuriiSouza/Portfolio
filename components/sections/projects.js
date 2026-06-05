@@ -2,6 +2,37 @@ import { Database, ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
+    "name": "Vitalium",
+    "description": "Plataforma de monitoramento e acompanhamento médico que conecta pacientes, médicos e clínicas em um ambiente integrado. O sistema permite comunicação contínua via chat, registro diário da evolução dos pacientes, notificações inteligentes e geração de relatórios com inteligência artificial, promovendo um acompanhamento mais próximo e eficiente da saúde dos usuários.",
+    "tech": ["Git", "PostgreSQL", "Docker", "Prisma", "NestJS", "Next.js", "TypeScript", "Redis", "AWS", "IA Generativa", "Arquitetura de Microsserviços", "Event-Driven Architecture", "Gestão de Projetos"],
+    "highlights": [
+      "Comunicação direta entre médicos e pacientes através de chat integrado.",
+      "Registro diário de sintomas e evolução clínica dos pacientes.",
+      "Geração automática de relatórios médicos utilizando Inteligência Artificial.",
+      "Integração com WhatsApp para ampliar a comunicação e o acompanhamento.",
+      "Arquitetura escalável baseada em eventos para suportar milhares de usuários."
+    ],
+    "github": null,
+    "image": "/vitalium-image.png",
+    "demo": null
+  },
+  {
+    "name": "GeoSurvey",
+    "description": "Sistema SaaS especializado na gestão de sondagens geotécnicas, desenvolvido para empresas de engenharia que realizam investigações de solo. A plataforma centraliza a gestão de projetos, equipes, equipamentos, furos de sondagem e geração automática de relatórios técnicos conforme normas brasileiras, reduzindo retrabalho e aumentando a produtividade operacional.",
+    "tech": ["Git", "PostgreSQL", "Docker", "Prisma", "NestJS", "Next.js", "TypeScript", "Redis", "AWS", "Mapbox", "MinIO / S3", "Puppeteer", "Arquitetura SaaS Multiempresa", "Gestão de Projetos"],
+    "highlights": [
+      "Gestão completa de projetos de sondagem geotécnica em uma única plataforma.",
+      "Geração automatizada de relatórios SPT seguindo a NBR 6484:2020.",
+      "Controle de equipes, equipamentos e execução de campo em tempo real.",
+      "Gestão de solicitações e aprovações de novos furos entre sondadores e engenheiros.",
+      "Visualização geográfica dos projetos com mapas, coordenadas e localização dos furos.",
+      "Redução significativa do tempo gasto na elaboração de relatórios técnicos."
+    ],
+    "github": null,
+    "image": "/geosurvey-image.png",
+    "demo": null
+  },
+  {
     "name": "ERP + CRM Personalizado",
     "description": "Desenvolvimento e implementação de um sistema ERP (Enterprise Resource Planning) e CRM (Customer Relationship Management) completo, atendendo a 3 clientes com landing pages dedicadas. A solução integra gestão de usuários, pedidos e estoque, além de funcionalidades para o envio de pedidos e comunicação via WhatsApp API oficial. O projeto foca em otimizar operações, centralizar informações e aprimorar o relacionamento com o cliente.",
     "tech": ["Node.js", "Next.js", "NestJS", "Prisma", "Git", "MySQL", "WhatsApp API Oficial"],
@@ -86,10 +117,19 @@ export function Projects() {
           <div key={index} className="card border border-gray-700 rounded-lg overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
               <div className="h-64 md:h-auto">
-                <img
-                  src={project.image}
-                  className="w-full h-full object-cover"
-                />
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full min-h-[16rem] flex items-center justify-center bg-gradient-to-br from-blue-600/20 to-gray-800 p-6">
+                    <span className="text-2xl font-bold text-blue-300 text-center">
+                      {project.name}
+                    </span>
+                  </div>
+                )}
               </div>
               <div className="flex flex-col p-6">
                 <div className="mb-4">
@@ -120,16 +160,18 @@ export function Projects() {
                   </div>
                 </div>
                 <div className="flex justify-between mt-6">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 rounded-lg transition-colors"
-                  >
-                    <Github className="h-4 w-4" />
-                    GitHub
-                  </a>
-                  {project.demo && 
+                  {project.github &&
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 rounded-lg transition-colors"
+                    >
+                      <Github className="h-4 w-4" />
+                      GitHub
+                    </a>
+                  }
+                  {project.demo &&
                     <button className="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 rounded-lg transition-colors">
                       <ExternalLink className="h-4 w-4" />
                       Demo

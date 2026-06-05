@@ -18,6 +18,7 @@ import {
   Moon,
 } from "lucide-react"
 import { useTheme } from "next-themes"
+import { PersonaSwitcher } from "@/components/shared/personaSwitcher"
 
 export function HeaderNavigation() {
   const [activeSection, setActiveSection] = useState("home")
@@ -102,6 +103,9 @@ export function HeaderNavigation() {
                 <span>{item.label}</span>
               </button>
             ))}
+            <div className="ml-2">
+              <PersonaSwitcher active="dev" variant="dark" />
+            </div>
             <button
               onClick={toggleTheme}
               className="ml-2 p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-200 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-800 transition-colors"
@@ -134,6 +138,9 @@ export function HeaderNavigation() {
           className={`md:hidden bg-background/95 backdrop-blur-md shadow-lg border-t border-gray-200 dark:bg-background/95 dark:border-gray-700`}
         >
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-2">
+            <div className="pb-2">
+              <PersonaSwitcher active="dev" variant="dark" />
+            </div>
             {navItems.map((item) => (
               <button
                 key={item.id}

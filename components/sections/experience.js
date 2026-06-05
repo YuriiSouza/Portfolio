@@ -2,6 +2,26 @@ import { Briefcase, Calendar } from "lucide-react"
 
 const experiences = [
   {
+    company: "Shopee Express Brasil",
+    position: "Analista de Transporte e Dados Operacionais",
+    period: "2024 - Presente",
+    description:
+      "Responsável pela análise e gestão operacional da malha logística de última milha, atuando diretamente no monitoramento de indicadores, gestão de motoristas parceiros, otimização de processos e desenvolvimento de soluções baseadas em dados para aumentar a eficiência operacional. Atuo na identificação de gargalos logísticos, análise de desempenho de motoristas, gestão de capacidade operacional e elaboração de planos de ação orientados por indicadores, contribuindo para a melhoria contínua da operação e redução de falhas nas entregas.",
+    responsibilities: [
+      "Monitoramento e análise de indicadores operacionais (KPIs) relacionados à distribuição e entrega de encomendas.",
+      "Gestão e acompanhamento da convocação de motoristas parceiros para atendimento da demanda operacional.",
+      "Desenvolvimento de dashboards, relatórios e análises para suporte à tomada de decisão.",
+      "Investigação de causas-raiz utilizando metodologias estruturadas para redução de falhas operacionais.",
+      "Planejamento e execução de ações para melhoria da aderência de rotas e redução de no-shows.",
+      "Automação de processos operacionais utilizando ferramentas de análise de dados.",
+      "Análise de produtividade, desempenho e eficiência de motoristas e regiões operacionais.",
+      "Apoio à liderança na definição de estratégias operacionais baseadas em dados.",
+      "Criação de controles operacionais e sistemas internos para aumento da produtividade da equipe."
+    ],
+    technologies: ["Python", "SQL", "PostgreSQL", "Google Sheets", "Power BI", "Looker Studio", "Git", "Docker", "Linux", "Análise de Dados", "Business Intelligence (BI)", "Gestão de Indicadores"],
+    logo: "/shopee.png",
+  },
+  {
     company: "ReGra Logística em Distribuição Ltda.",
     position: "Analista de dados",
     period: "2023 - Presente",
@@ -46,7 +66,15 @@ export function Experience() {
           <div key={index} className="card border border-gray-700 rounded-lg overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
               <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 flex items-center justify-center">
-                <img src={exp.logo} alt={exp.company} className="w-24 h-24 rounded-full" />
+                {exp.logo ? (
+                  <img src={exp.logo} alt={exp.company} className="w-24 h-24 rounded-full" />
+                ) : (
+                  <div className="w-24 h-24 rounded-full bg-blue-600/20 border border-blue-600/30 flex items-center justify-center">
+                    <span className="text-3xl font-bold text-blue-300">
+                      {exp.company.charAt(0)}
+                    </span>
+                  </div>
+                )}
               </div>
               <div className="md:col-span-3 p-6">
                 <div className="flex items-center justify-between mb-4">
