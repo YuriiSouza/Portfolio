@@ -1,38 +1,35 @@
-import { AboutMe } from "@/components/sections/aboutMe"
-import { TechStack } from "@/components/sections/techStack"
-import { Projects } from "@/components/sections/projects"
-import { CaseStudies } from "@/components/sections/caseStudies"
-import { Experience } from "@/components/sections/experience"
-import { Certifications } from "@/components/sections/certifications"
-import { Contact } from "@/components/sections/contact"
-import { Hero } from "@/components/sections/hero"
-import { HeaderNavigation } from "@/components/shared/headerNavigation"
+import { Space_Grotesk, Manrope, JetBrains_Mono } from "next/font/google";
+import DevPortfolio from "@/components/dev/dev-portfolio";
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-manrope",
+  display: "swap",
+});
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-jetbrains",
+  display: "swap",
+});
 
 export const metadata = {
-  title: "Yuri Souza — Desenvolvedor FullStack",
+  title: "Yuri Souza — Engenheiro de Software",
   description:
-    "Desenvolvedor de software com foco em backend, dados e automação. Sistemas de gestão, integrações e soluções que geram valor para empresas.",
-}
+    "Yuri Souza — Engenheiro de Software. Sistemas de gestão, automação e dados. Goiás, Brasil.",
+};
 
-export default function DevHome() {
+export default function DevPage() {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto">
-        <main className="pt-16">
-          <HeaderNavigation />
-          <Hero />
-          <div className="space-y-24 px-4 py-8">
-            <AboutMe />
-            <TechStack />
-            <Projects />
-            <CaseStudies />
-            <Experience />
-            <Certifications />
-            {/* <Blog /> */}
-            <Contact />
-          </div>
-        </main>
-      </div>
+    <div className={`${spaceGrotesk.variable} ${manrope.variable} ${jetbrainsMono.variable}`}>
+      <DevPortfolio />
     </div>
-  )
+  );
 }
