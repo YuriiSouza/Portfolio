@@ -19,7 +19,7 @@ export function FinanceNavbar() {
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10)
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
@@ -31,10 +31,10 @@ export function FinanceNavbar() {
 
   return (
     <header
-      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
+      className={`fixed left-0 right-0 top-0 z-50 border-b transition-[background-color,border-color,box-shadow] duration-300 ${
         isScrolled
-          ? "border-b border-slate-200 bg-white/90 shadow-sm backdrop-blur-md"
-          : "bg-transparent"
+          ? "border-slate-200 bg-white/90 shadow-sm backdrop-blur-md"
+          : "border-transparent bg-transparent"
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
