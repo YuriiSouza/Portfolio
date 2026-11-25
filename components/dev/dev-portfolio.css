@@ -133,9 +133,10 @@
   border-radius: 999px;
   border: 1px solid var(--line);
   color: var(--text);
-  transition: background .25s, border-color .25s, transform .25s;
+  transition: background .25s, border-color .25s, transform .16s var(--ease);
 }
 .dev-portfolio .nav-cta:hover { background: var(--accent); border-color: var(--accent); }
+.dev-portfolio .nav-cta:active { transform: scale(0.97); }
 @media (max-width: 820px) {
   .dev-portfolio .nav-links { display: none; }
 }
@@ -369,14 +370,12 @@
   overflow: hidden;
   transition: border-color .4s var(--ease), transform .4s var(--ease);
 }
-.dev-portfolio .stack-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-4px); }
 .dev-portfolio .stack-card::before {
   content: "";
   position: absolute; inset: 0;
   background: radial-gradient(80% 60% at 0% 0%, rgba(59,130,246,0.12), transparent 55%);
-  opacity: 0; transition: opacity .4s;
+  opacity: 0; transition: opacity .4s var(--ease);
 }
-.dev-portfolio .stack-card:hover::before { opacity: 1; }
 .dev-portfolio .stack-card .ic {
   width: 40px; height: 40px;
   display: grid; place-items: center;
@@ -397,7 +396,6 @@
   border-radius: 7px;
   transition: color .25s, border-color .25s, background .25s;
 }
-.dev-portfolio .stack-card:hover .chip { color: var(--text); border-color: var(--line); }
 @media (max-width: 900px) {
   .dev-portfolio .stack-grid { grid-template-columns: repeat(2,1fr); }
 }
@@ -524,9 +522,8 @@
   display: flex; align-items: center; gap: 16px;
   border: 1px solid var(--line); border-radius: 14px;
   padding: 18px; background: var(--bg-2);
-  transition: border-color .35s, transform .35s;
+  transition: border-color .35s var(--ease), transform .35s var(--ease);
 }
-.dev-portfolio .cert-card:hover { border-color: rgba(59,130,246,0.35); transform: translateY(-3px); }
 .dev-portfolio .cert-logo { width: 52px; height: 52px; border-radius: 10px; background: #fff; flex-shrink: 0; display: grid; place-items: center; overflow: hidden; }
 .dev-portfolio .cert-logo.dark { background: #0c1430; }
 .dev-portfolio .cert-logo img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
@@ -561,13 +558,12 @@
   display: inline-flex; align-items: center; gap: 9px;
   font-weight: 600; font-size: 15px;
   padding: 15px 26px; border-radius: 999px;
-  transition: transform .25s, background .25s, border-color .25s, box-shadow .25s;
+  transition: transform .25s var(--ease), background .25s, border-color .25s, box-shadow .25s var(--ease);
 }
 .dev-portfolio .btn svg { width: 17px; height: 17px; }
 .dev-portfolio .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 10px 40px -10px var(--glow); }
-.dev-portfolio .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 50px -10px var(--glow); }
 .dev-portfolio .btn-ghost { border: 1px solid var(--line); color: var(--text); }
-.dev-portfolio .btn-ghost:hover { border-color: var(--accent); transform: translateY(-3px); }
+.dev-portfolio .btn:active { transform: scale(0.97); transition-duration: .16s; }
 .dev-portfolio .footer {
   position: relative; z-index: 2;
   margin-top: clamp(90px, 14vh, 160px);
@@ -588,6 +584,16 @@
 .dev-portfolio .footer-social a:hover { color: var(--text); border-color: var(--accent); background: rgba(59,130,246,0.1); }
 .dev-portfolio .footer-social svg { width: 18px; height: 18px; }
 .dev-portfolio .scroll-bar { position: fixed; top: 0; left: 0; height: 2px; width: 100%; z-index: 200; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--accent), var(--accent-soft)); box-shadow: 0 0 10px var(--glow); }
+@media (hover: hover) and (pointer: fine) {
+  .dev-portfolio .stack-card:hover { border-color: rgba(59,130,246,0.4); transform: translateY(-4px); }
+  .dev-portfolio .stack-card:hover::before { opacity: 1; }
+  .dev-portfolio .stack-card:hover .chip { color: var(--text); border-color: var(--line); }
+  .dev-portfolio .cert-card:hover { border-color: rgba(59,130,246,0.35); transform: translateY(-3px); }
+  .dev-portfolio .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 18px 50px -10px var(--glow); }
+  .dev-portfolio .btn-ghost:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .dev-portfolio .btn-primary:hover:active,
+  .dev-portfolio .btn-ghost:hover:active { transform: translateY(-3px) scale(0.97); }
+}
 @media (prefers-reduced-motion: reduce) {
   .dev-portfolio .reveal,
   .dev-portfolio .reveal-right { transform: none !important; transition-property: opacity; transition-duration: .4s; transition-timing-function: var(--ease); }
