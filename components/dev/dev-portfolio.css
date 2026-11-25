@@ -150,7 +150,6 @@
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  will-change: transform, filter;
 }
 .dev-portfolio .hero-glow {
   position: absolute;
@@ -175,7 +174,7 @@
   -webkit-mask-image: radial-gradient(circle at 50% 45%, #000 0%, transparent 70%);
   opacity: 0.6;
 }
-.dev-portfolio .hero-content { position: relative; z-index: 2; will-change: transform, opacity; padding: 0 24px; }
+.dev-portfolio .hero-content { position: relative; z-index: 2; will-change: transform, opacity, filter; padding: 0 24px; }
 .dev-portfolio .hero-kicker {
   font-family: var(--font-mono);
   font-size: clamp(11px, 1.3vw, 13px);
