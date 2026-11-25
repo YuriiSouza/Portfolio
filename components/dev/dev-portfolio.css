@@ -586,6 +586,7 @@
 .dev-portfolio .footer-social svg { width: 18px; height: 18px; }
 .dev-portfolio .scroll-bar { position: fixed; top: 0; left: 0; height: 2px; width: 100%; z-index: 200; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--accent), var(--accent-soft)); box-shadow: 0 0 10px var(--glow); }
 @media (prefers-reduced-motion: reduce) {
-  .dev-portfolio .reveal { opacity: 1 !important; transform: none !important; }
+  .dev-portfolio .reveal,
+  .dev-portfolio .reveal-right { transform: none !important; transition-property: opacity; transition-duration: .4s; transition-timing-function: var(--ease); }
   .dev-portfolio .hero-cue .line::after { animation: none; }
 }
